@@ -1,0 +1,68 @@
+:root {
+  --buttonStripe1: #B70008;
+  --buttonStripe2: #CA2127;
+  --h2Font: Arvo-Bold, Helvetica, Arial, sans-serif;
+  --h3Font: Arvo-Bold, Helvetica, Arial, sans-serif;
+  --scoreFont: Arvo-Bold, Helvetica, Arial, sans-serif;
+  --button-text-color: #ffffff;
+  --button-shadow-light: 0 0 5px #ffffff;
+  --button-shadow-dark: 0 0 1px #1D3361, 0 0 1px #1D3361, 0 0 1.5px #1D3361;
+  --text-shadow-thick-light: 0px 0px 2px #fff, 0px 0px 4px #fff, 0px 0px 5px #fff, 0px 0px 6px #fff;
+  --fade-anim:                           transform 0s linear 0.35s, visibility 0s linear 0.35s, opacity 0.35s linear;
+  --fade-anim-showing:                   visibility 0s linear, opacity 0.35s linear;
+  --fade-anim-showing-delayed:           transform 0s linear, visibility 0s linear, 1.65s opacity 0.35s linear;
+  --opacity-transition-medium:           opacity 0.5s linear;
+  --eased-transition-medium:             transform 0.75s cubic-bezier(.53,0,.53,1);
+  --eased-transition-long:               transform 1.25s cubic-bezier(.53,0,.53,1);
+  --eased-transition-long-delay:   1.1s  transform 0.40s cubic-bezier(.53,0,.53,1);
+  --eased-transition-medium-delay: 0.75s transform 0.75s cubic-bezier(.53,0,.53,1);
+}
+
+
+@font-face{
+  font-family: Arvo-Bold;
+  src: url(../../fonts/Arvo-Bold.ttf) format("truetype");
+  font-style: normal;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  box-sizing: border-box;
+}
+
+body {
+  transition: opacity 0.5s linear;
+  font-family: Arvo-Bold, Helvetica, Arial, sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.3;
+  color: #000;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  opacity: 0;
+  font-weight: normal;
+}
+
+body.ready {
+  opacity: 1
+}
+
+@media (min-width: 420px) {
+  body {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 700px) {
+  body {
+    font-size: 1.7rem;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.shadow {
+  filter: drop-shadow( 0 0.1rem 0.6rem rgba(0,0,0,1.0) );
+}
